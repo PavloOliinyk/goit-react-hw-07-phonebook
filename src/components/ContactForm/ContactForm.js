@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useCreateContactMutation } from '../redux/contactSlice';
+import { useCreateContactMutation } from '../../redux/contactSlice';
 
 import s from './ContactForm.module.css';
 

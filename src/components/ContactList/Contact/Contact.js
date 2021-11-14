@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import s from './Contact.module.css';
-import { useDeleteContactMutation } from '../../redux/contactSlice';
+import { useDeleteContactMutation } from '../../../redux/contactSlice';
 
 function Contact({ contact: { name, phone, id } }) {
   const [deleteContact] = useDeleteContactMutation();
