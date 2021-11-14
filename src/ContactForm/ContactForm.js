@@ -3,7 +3,7 @@ import { useCreateContactMutation } from '../redux/contactSlice';
 
 import s from './ContactForm.module.css';
 
-function ContactForm() {
+function ContactForm({ contacts }) {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [createContact] = useCreateContactMutation();
@@ -26,17 +26,17 @@ function ContactForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
+    const isNotUniqueContact = contacts.some(contact =>
+      contact.name.includes(name),
+    );
+
+    if (isNotUniqueContact) {
+      window.alert(`${name} is already in contacts`);
+      reset();
+      return;
+    }
 
     createContact({ name, number });
-
-    // const isNotUniqueContact = contacts.some(contact =>
-    //   contact.name.includes(name),
-    // );
-
-    // if (isNotUniqueContact) {
-    //   window.alert(`${name} is already in contacts`);
-    //   return;
-    // }
 
     reset();
   };

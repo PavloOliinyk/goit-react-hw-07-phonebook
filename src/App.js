@@ -21,7 +21,7 @@ function App() {
   return (
     <Container>
       <h1 className="title">Phonebook</h1>
-      <ContactForm />
+      <ContactForm contacts={contacts} />
       <h2 className="title">Contacts</h2>
       <Filter />
 
