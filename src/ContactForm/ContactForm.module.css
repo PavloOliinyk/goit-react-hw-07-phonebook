@@ -1,0 +1,253 @@
+body {
+  background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
+
+  font-size: 12px;
+}
+
+body,
+button,
+input {
+  letter-spacing: 1.4px;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.background {
+  display: flex;
+}
+
+.container {
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+
+  border-radius: 15px;
+  background: #3e3e3e;
+}
+
+.screen::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+
+  display: block;
+
+  content: '';
+
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.screenHeader {
+  display: flex;
+  align-items: center;
+
+  padding: 10px 20px;
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: #4d4d4f;
+}
+
+.screenHeaderLeft {
+  margin-right: auto;
+}
+
+.screenHeaderButton {
+  display: inline-block;
+
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+
+  border-radius: 8px;
+  background: white;
+}
+
+.screenHeaderButton.close {
+  background: #ed1c6f;
+}
+
+.screenHeaderButton.maximize {
+  background: #e8e925;
+}
+
+.screenHeaderButton.minimize {
+  background: #74c54f;
+}
+
+.screenHeaderRight {
+  display: flex;
+}
+
+.screenHeaderEllipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+
+  border-radius: 8px;
+  background: #999;
+}
+
+.screenBody {
+  display: flex;
+}
+
+.screenBodyItem {
+  flex: 1;
+
+  padding: 50px;
+}
+
+.screenBodyItem.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.appTitle {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #ea1d6f;
+
+  font-size: 26px;
+}
+
+.appTitle::after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+
+  display: block;
+
+  width: 25px;
+  height: 4px;
+
+  content: '';
+
+  background: #ea1d6f;
+}
+
+.appContact {
+  margin-top: auto;
+
+  color: #888;
+
+  font-size: 8px;
+}
+
+.appFormGroup {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: #ea1d6f;
+
+  font-size: 18px;
+}
+
+.appFormControl {
+  width: 100%;
+  padding: 10px 0;
+
+  transition: border-color 0.2s;
+
+  color: #ddd;
+  outline: none;
+
+  font-size: 14px;
+}
+
+.appFormControl::placeholder {
+  color: #666;
+}
+
+.appFormControl:focus {
+  border-bottom-color: #ddd;
+}
+
+.appFormControl {
+  color: #ea1d6f;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.appFormControl:hover {
+  color: #b9134f;
+}
+
+@media screen and (max-width: 520px) {
+  .screenBody {
+    flex-direction: column;
+  }
+
+  .screenBodyItem.left {
+    margin-bottom: 30px;
+  }
+
+  .appTitle {
+    flex-direction: row;
+  }
+
+  .appTitle span {
+    margin-right: 12px;
+  }
+
+  .appTitle::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .screenBody {
+    padding: 40px;
+  }
+
+  .screenBodyItem {
+    padding: 0;
+  }
+}
+
+.appFormButton {
+  display: block;
+
+  margin: 0 auto;
+  padding: 1rem 1.3rem;
+
+  cursor: pointer;
+
+  transition: all 0.15s;
+  letter-spacing: -0.24px;
+
+  color: #000;
+  border-style: none;
+  border-radius: 40em;
+
+  outline: none;
+  box-shadow: #adcfff 0 -12px 6px inset;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.appFormButton:hover {
+  transform: scale(1.05);
+
+  background-color: #ffc229;
+  box-shadow: #ff6314 0 -6px 8px inset;
+}
+
+.appFormButton:active {
+  transform: scale(1.025);
+}

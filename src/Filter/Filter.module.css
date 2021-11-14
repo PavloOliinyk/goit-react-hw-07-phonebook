@@ -1,0 +1,66 @@
+.screenBodyItem {
+  display: block;
+
+  padding: 10px;
+
+  text-align: center;
+}
+
+.screenBodyItem.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.appFormGroup {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: #ddd;
+
+  font-size: 18px;
+}
+
+.appFormControl {
+  margin-left: 15px;
+  padding: 10px 0;
+
+  transition: border-color 0.2s;
+
+  color: #ddd;
+  outline: none;
+
+  font-size: 14px;
+}
+
+.appFormControl::placeholder {
+  color: #666;
+}
+
+.appFormControl:focus {
+  border-bottom-color: #ddd;
+}
+
+.appFormControl {
+  color: #ea1d6f;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.appFormControl:hover {
+  color: #b9134f;
+}
+
+@media screen and (max-width: 520px) {
+  .screenBodyItem.left {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .screenBodyItem {
+    padding: 0;
+  }
+}
